@@ -163,11 +163,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       flex-direction: column;
       justify-content: center;  /* Centers title vertically; change to 'flex-start' for top */
       align-items: center;      /* Optional horizontal centering */
-      /* Optional: Uncomment for card styling */
-      /* padding: 20px 15px; */
-      /* background: #f8f9fa; */
-      /* border: 1px solid #eee; */
-      /* border-radius: 6px; */
     }
 
     /* Optional: Make images consistent height across cards */
@@ -228,9 +223,6 @@ footer .elementor-column[data-id="4fd78ced"] .elementor-widget-wrap {
 }
 </style>
 <style>
-	/* ────────────────────────────────────────────────
-   Prevent "SERVICE AREAS" from wrapping on desktop
-   ──────────────────────────────────────────────── */
 @media (min-width: 1025px) {   /* or use 768px / 992px depending on your breakpoint */
     footer .elementor-element-7321ad4 .elementor-heading-title {
         white-space: nowrap !important;
@@ -244,6 +236,111 @@ footer .elementor-column[data-id="4fd78ced"] .elementor-widget-wrap {
     /* If it's still wrapping due to column width → give the column a bit more breathing room */
     footer .elementor-column[data-id="4fd78ced"] {
         min-width: 220px;          /* adjust 200–260px as needed — test on 1440px and 1920px screens */
+    }
+}
+</style>
+<style>
+/* Core hero section flush */
+.elementor-11 [data-id="411b00086"],
+body .elementor-11 .elementor-section[data-id="411b00086"] {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Aggressively zero inners inside ONLY this hero (this is where the 10px usually hides) */
+.elementor-11 [data-id="411b00086"] .elementor-container,
+.elementor-11 [data-id="411b00086"] .elementor-column,
+.elementor-11 [data-id="411b00086"] .elementor-widget-wrap,
+.elementor-11 [data-id="411b00086"] .elementor-widget-wrap > *,
+.elementor-11 [data-id="411b00086"] .elementor-column > .elementor-widget-wrap {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* If gap is from column gap defaults or direct child widget */
+.elementor-11 [data-id="411b00086"] .elementor-column-gap-default > .elementor-column > .elementor-widget-wrap,
+.elementor-11 [data-id="411b00086"] .elementor-widget-wrap:first-child {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Body/html reset (harmless) */
+html, body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Last resort: catch any first-child wrapper after header/skip-link */
+.elementor-11 > section.elementor-section:first-of-type,
+body > .elementor > section:first-of-type {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+</style>
+<style>
+	/* Target this exact section by its data-id or class */
+.elementor-element-bef34a7,
+[data-id="bef34a7"] {
+    padding-top: 80px !important;     /* Adjust this value: 40px, 80px, 100px, etc. */
+}
+
+/* If the content is still too close to the top edge, also pad the inner column(s) or widget wrap */
+.elementor-element-bef34a7 .elementor-column,
+.elementor-element-bef34a7 .elementor-widget-wrap {
+    padding-top: 0px !important;     /* Smaller value here if section padding alone is too much */
+}
+
+/* Optional: target only the heading + text + button area more precisely */
+.elementor-element-bef34a7 .elementor-widget-heading,
+.elementor-element-bef34a7 .elementor-widget-text-editor,
+.elementor-element-bef34a7 .elementor-widget-button {
+    margin-top: 0 !important;         /* reset any default top margin */
+    padding-top: 30px !important;     /* internal space inside those widgets */
+}
+</style>
+<style>
+	header.elementor-location-header .elementor-widget-image,          /* common for logo widget */
+header.elementor-location-header .elementor-widget-site-logo,      /* if using site logo widget */
+header.elementor-location-header img.site-logo,                    /* direct image if no widget wrapper */
+header.elementor-location-header .elementor-widget-container,      /* broader container safety */
+.site-header .custom-logo-link,                                    /* fallback for Hello theme logo link */
+.site-branding,                                                    /* common Hello wrapper */
+.elementor-widget-site-logo .elementor-image img {                 /* another common path */
+    padding-left: 5px !important;                                 /* main fix – increase to 50px if needed */
+    margin-left: 0 !important;                                     /* prevent extra margin conflict */
+}
+</style>
+<style>
+footer .elementor-element-77dedfb {
+    background-size: cover !important;
+    background-position: bottom center !important;
+    background-repeat: no-repeat !important;
+}
+</style>
+<style>
+	footer .elementor-element-6af27005 {
+    margin-top: 180px !important;  /* adjust 40–120px */
+}
+</style>
+<style>
+	
+</style>
+<style>
+	@media (min-width: 1025px) {
+
+    .elementor-109 .elementor-element-effec5d .elementor-icon-list-items {
+        margin-left: -25px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Still prevent wrapping on the text itself */
+    .elementor-109 .elementor-element-effec5d .elementor-icon-list-text {
+        white-space: nowrap !important;
+    }
+
+    /* Optional safety padding on parent if still clipped */
+    .elementor-109 .elementor-element-3541fd94 {
+        padding-left: 10px !important;
     }
 }
 </style>
@@ -632,7 +729,7 @@ footer .elementor-column[data-id="4fd78ced"] .elementor-widget-wrap {
 				</div>
 				<div class="elementor-element elementor-element-7321ad4 elementor-widget elementor-widget-heading" data-id="7321ad4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">SERVICE AREAS</h2>				</div>
+					<h5 class="elementor-heading-title elementor-size-default">SERVICE AREAS</h5>				</div>
 				</div>
 				<div class="elementor-element elementor-element-4f7990d elementor-icon-list--layout-inline elementor-widget__width-initial elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4f7990d" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">

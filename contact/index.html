@@ -334,7 +334,7 @@ section[data-id="63af3144"] .elementor-element[data-id="e70b458"] h2 {
 
 /* Pull the contact box upward — milder than before */
 section[data-id="63af3144"] .elementor-element[data-id="e70b458"] {
-    margin-top: 0rem !important;          /* Small upward nudge — was -1rem or more; try 0 or -0.8rem if still too high */
+    margin-top: 2.5rem !important;          /* Small upward nudge — was -1rem or more; try 0 or -0.8rem if still too high */
 }
 
 /* Reduce space from the overall contact section (less aggressive) */
@@ -361,6 +361,90 @@ section[data-id="63af3144"] {
 /* Optional: also add some top padding to footer if it still feels glued */
 footer.elementor-126 {
     padding-top: 40px !important;        /* 30–60px usually enough */
+}
+</style>
+<style>
+/* Core hero section flush */
+.elementor-11 [data-id="411b00086"],
+body .elementor-11 .elementor-section[data-id="411b00086"] {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Aggressively zero inners inside ONLY this hero (this is where the 10px usually hides) */
+.elementor-11 [data-id="411b00086"] .elementor-container,
+.elementor-11 [data-id="411b00086"] .elementor-column,
+.elementor-11 [data-id="411b00086"] .elementor-widget-wrap,
+.elementor-11 [data-id="411b00086"] .elementor-widget-wrap > *,
+.elementor-11 [data-id="411b00086"] .elementor-column > .elementor-widget-wrap {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* If gap is from column gap defaults or direct child widget */
+.elementor-11 [data-id="411b00086"] .elementor-column-gap-default > .elementor-column > .elementor-widget-wrap,
+.elementor-11 [data-id="411b00086"] .elementor-widget-wrap:first-child {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Body/html reset (harmless) */
+html, body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Last resort: catch any first-child wrapper after header/skip-link */
+.elementor-11 > section.elementor-section:first-of-type,
+body > .elementor > section:first-of-type {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+</style>
+<style>
+	header.elementor-location-header .elementor-widget-image,          /* common for logo widget */
+header.elementor-location-header .elementor-widget-site-logo,      /* if using site logo widget */
+header.elementor-location-header img.site-logo,                    /* direct image if no widget wrapper */
+header.elementor-location-header .elementor-widget-container,      /* broader container safety */
+.site-header .custom-logo-link,                                    /* fallback for Hello theme logo link */
+.site-branding,                                                    /* common Hello wrapper */
+.elementor-widget-site-logo .elementor-image img {                 /* another common path */
+    padding-left: 5px !important;                                 /* main fix – increase to 50px if needed */
+    margin-left: 0 !important;                                     /* prevent extra margin conflict */
+}
+</style>
+<style>
+footer .elementor-element-77dedfb {
+    background-size: cover !important;
+    background-position: bottom center !important;
+    background-repeat: no-repeat !important;
+}
+</style>
+<style>
+	footer .elementor-element-6af27005 {
+    margin-top: 180px !important;  /* adjust 40–120px */
+}
+</style>
+<style>
+	
+</style>
+<style>
+	@media (min-width: 1025px) {
+
+    .elementor-109 .elementor-element-effec5d .elementor-icon-list-items {
+        margin-left: -25px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Still prevent wrapping on the text itself */
+    .elementor-109 .elementor-element-effec5d .elementor-icon-list-text {
+        white-space: nowrap !important;
+    }
+
+    /* Optional safety padding on parent if still clipped */
+    .elementor-109 .elementor-element-3541fd94 {
+        padding-left: 10px !important;
+    }
 }
 </style>
 </head>
@@ -590,7 +674,7 @@ footer.elementor-126 {
 				</div>
 				<div class="elementor-element elementor-element-7321ad4 elementor-widget elementor-widget-heading" data-id="7321ad4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">SERVICE AREAS</h2>				</div>
+					<h5 class="elementor-heading-title elementor-size-default">SERVICE AREAS</h5>				</div>
 				</div>
 				<div class="elementor-element elementor-element-4f7990d elementor-icon-list--layout-inline elementor-widget__width-initial elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4f7990d" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
